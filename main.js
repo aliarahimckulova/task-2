@@ -3,8 +3,9 @@ function getData() {
   return new Promise(resolve => {
     setTimeout(() => resolve(42), 1000)
   })
+ 
 }
-function loadCached(url) {
+function loadCached(getData()) {
   let cache = loadCached.cache || (loadCached.cache = new Map());
 
   if (cache.has(url)) {
